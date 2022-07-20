@@ -82,11 +82,12 @@ class Triangle(Figure):
 
     @property
     def area(self):
-        return (self.base * self.height) / 2
+        return self.base * self.height / 2
 
     @area.setter
-    def area(self, area):
-        self.base = (area * 2) / self.height
+    def area(self, value):
+        self._area = value
+
 
 
 circle = Circle(5)
@@ -105,33 +106,35 @@ circle = Circle(5)
 # print(okrąg.radius)
 # print(okrąg.diameter)
 
-print(circle.radius)
-circle.radius = 5
-print(circle.radius)
-circle.radius = 2
-print(circle.radius)
-c1 = Circle(1)
+# print(circle.radius)
+# circle.radius = 5
+# print(circle.radius)
+# circle.radius = 2
+# print(circle.radius)
+# c1 = Circle(1)
 c2 = Circle(2)
-print(c1 == c2)
-print(c1 > c2)
-print(c1 <= c2)
-
-print()
-
+# print(c1 == c2)
+# print(c1 > c2)
+# print(c1 <= c2)
+#
+# print()
+#
 k1 = Square(5)
 k2 = Square(10)
-
-print()
-print(k1 == k2)
-print(k1 > k2)
-print(k1 <= k2)
+#
+# print()
+# print(k1 == k2)
+# print(k1 > k2)
+# print(k1 <= k2)
 # print(k1 + c2)
 
 print()
-t = Triangle()
-t.area = 100
-print(k1.area)
+t = Triangle(5)
+
+
+print(t.height)
 print(t.area)
+print(t.base)
 print()
 print(t == k2)
 print(t > k2)
